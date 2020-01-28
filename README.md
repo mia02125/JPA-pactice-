@@ -120,9 +120,9 @@ public class UserPwHashCode {
 ```
 
 <br><br><br>
-<h1>.</h1>
-<h1>.</h1>
-<h1>로그인 생략하고 아이디 찾기</h1> 
+<h2>.</h2>
+<h2>.</h2>
+<h1>로그인 생략하고 <Strong>아이디 찾기</Strong></h1> 
 
 ```html
 

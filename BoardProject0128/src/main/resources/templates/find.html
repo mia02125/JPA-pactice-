@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>find</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="/findRequest" method="post">
+		<h3>가입되어있는 정보를 알기위해서 이름을 입력하세요</h3>
+		<input type="text" name="userName"> 
+		<input type="submit" value="찾기">
+		<table th:if="${session.findUser != null}">
+			<thead>
+				<tr>
+					<th width="30">ID</th>
+				</tr>
+				<th:block th:each="User:${session.findUser}"> <!-- new ArrayList<Freeboard>()의 boardList의 내용을 board 이라함  -->
+				<tr>
+					<td width="30" style="text-align: center"><span th:text="${User.getUserId()}"></span></td>
+				</tr>
+				</th:block>
+			</thead>
+		</table>	
+	</form>
+	<a href="/">시작페이지로</a>
+</body>
+</html>

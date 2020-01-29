@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+  	$(function() { 
+  		$('#userPwCheck').blur(function() { 
+  		if($('#userPw').val() != $('#userPwCheck').val()) {
+  			if($('#userPwCheck').val()!='') {
+  				alert("비밀번호가 일치하지않습니다.");
+  				$('#userPwCheck').val('');
+  				$('#userPwCheck').blur();
+  			}
+  		}
+  	})
+});
+  </script>
+<title>회원가입</title>
+</head>
+<body>
+<form action="/joinRequest" method="post">
+<input type="text" placeholder="ID" name = "userId"/>
+<input type="password" placeholder="PW" name = 'userPw' id = 'userPw'/>
+<input type="password" placeholder="PW확인" name='userPwCheck' id = 'userPwCheck'/>
+<input type="text" placeholder="NAME" name = "userName"/>
+<input type="text" placeholder="EMAIL" name = "userEmail"/>
+<input type="submit" id="signUpBtn" value = "가입"/>
+</form>
+</body>
+</html>
